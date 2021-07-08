@@ -1,0 +1,180 @@
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/app_bar"/>
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_view"
+        android:layout_margin="16dp"
+        android:text="Review your Information"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textAlignment="center"
+        />
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/img_edit_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_user_info"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-50dp"
+        android:layout_marginRight="40dp"
+        android:src="@drawable/ic_edit"/>
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/img_edit_addres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_address_info"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-50dp"
+        android:layout_marginRight="40dp"
+        android:src="@drawable/ic_edit"/>
+    <LinearLayout
+        android:id="@+id/layout_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_title"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_user_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer Information"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            />
+
+        <TextView
+            android:id="@+id/txt_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:id="@+id/txt_user_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="20dp"
+            /><TextView
+        android:id="@+id/txt_user_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mobile"
+        android:textSize="20dp"
+        />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/layout_address_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_user_info"
+        android:layout_margin="16dp">
+        <TextView
+            android:id="@+id/txt_address_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery Address"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            />
+        <TextView
+            android:id="@+id/txt_address_type"
+            android:layout_below="@+id/txt_address_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:id="@+id/txt_address_houseNo"
+            android:layout_below="@+id/txt_address_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="House Number"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:id="@+id/txt_address_street"
+            android:layout_below="@+id/txt_address_type"
+            android:layout_toRightOf="@id/txt_address_houseNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Street Name"
+            android:textSize="20dp"
+            />
+        <TextView
+        android:id="@+id/txt_address_city"
+        android:layout_below="@+id/txt_address_street"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City"
+        android:textSize="20dp"
+        />
+        <TextView
+            android:id="@+id/txt_adress_zipcode"
+            android:layout_below="@+id/txt_address_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Zip Code"
+            android:textSize="20dp"
+            />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/txt_error_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_pay_buttons"
+        android:layout_margin="20dp"
+        android:text="Error Message"
+        android:textColor="#FF0000"
+        android:textSize="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_pay_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btn_pay_online"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/green_basil"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:enabled="false"
+            android:text="Pay Online"/>
+
+        <Button
+            android:id="@+id/btn_pay_cash"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:text="Pay cash"
+            android:onClick="btnPayCash_onClick"
+            android:background="@color/green_basil"
+            android:textColor="#FFF"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</RelativeLayout>
